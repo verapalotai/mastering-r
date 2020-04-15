@@ -11,3 +11,11 @@ library(jsonlite)
 usdhuf <- fromJSON(readLines('https://api.exchangeratesapi.io/latest?base=USD&symbols=HUF'))$rates$HUF
 
 results <- btcusd*usdhuf*0.42
+
+## task 3
+library(logger)
+
+BITCOINS <- 0.42
+log_info('Number of Bitcoins: {BITCOINS}') # glue
+
+BITCOINS * btcusd * usdhuf
